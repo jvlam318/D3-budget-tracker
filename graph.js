@@ -39,6 +39,7 @@ const tip = d3.tip()
   });
 
 graph.call(tip);
+const total = document.querySelector('#sum');
 
 //update function
 const update = (data) => {
@@ -53,6 +54,8 @@ const update = (data) => {
   const paths = graph.selectAll('path')
     .data(pie(data))
 
+  const sum = data.map(d => d.cost).reduce((a, b) => a + b, 0)
+  total.textContent = `Total $${sum}`
   // handle the exit selection
   paths.exit()
     .transition().duration(750)
