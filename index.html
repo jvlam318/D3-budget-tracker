@@ -41,7 +41,7 @@
               <button class="btn-large pink white-text">Add Item</button>
             </div>
             <div class="input-field center">
-              <p class="red-text" id="error">test</p>
+              <p class="red-text" id="error"> </p>
             </div>
           </div>
         </form>
@@ -54,8 +54,25 @@
     </div>
   </div>
 
+  <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-firestore.js"></script>
+  <script>
+    var firebaseConfig = {
+      apiKey: "AIzaSyAISMVrKiUJkMjQtBsVaobJMBk1q1kZyI8",
+      authDomain: "udemy-d3-firebase-8c401.firebaseapp.com",
+      databaseURL: "https://udemy-d3-firebase-8c401.firebaseio.com",
+      projectId: "udemy-d3-firebase-8c401",
+      storageBucket: "udemy-d3-firebase-8c401.appspot.com",
+      messagingSenderId: "591060589053",
+      appId: "1:591060589053:web:654f567db16b2d3c166194",
+      measurementId: "G-WFETGSLF3S"
+    };
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+  </script>
   <script src="https://d3js.org/d3.v5.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.6/d3-legend.min.js"></script>
   <script src="graph.js"></script>
   <script src="index.js"></script>
 
