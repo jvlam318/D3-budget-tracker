@@ -6,7 +6,7 @@ const error = document.querySelector('#error');
 form.addEventListener('submit', (e) => {
   e.preventDefault();
 
-  if (name.value && cost.value) {
+  if (name.value && cost.value && Number.isInteger(cost.value)) {
     const item = {
       name: name.value,
       cost: parseInt(cost.value)
