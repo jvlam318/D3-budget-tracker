@@ -18,7 +18,7 @@ form.addEventListener('submit', (e) => {
       cost.value = "";
     })
   } else {
-    error.textContent = 'Please enter values before submitting';
+    error.textContent = 'Please enter valid values before submitting';
   };
 
 })
